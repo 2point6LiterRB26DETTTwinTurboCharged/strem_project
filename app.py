@@ -11,8 +11,7 @@ from groq import Groq
 st.set_page_config(page_title="RoboStrategy — FTC Optimizer", layout="wide")
 
 # --- Initialize Groq Chatbot (Hardcoded Key for local testing) ---
-GROQ_API_KEY = "gsk_yOuRaCtUaLgRoQaPiKeYhErE..."
-client = Groq(api_key=GROQ_API_KEY)
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # Initialize chatbot messages history
 if "messages" not in st.session_state:
